@@ -5,10 +5,8 @@ const ItemList = (props) => {
   const items = props.items;
   const handleAddToCart = props.handleAddToCart;
 
-  console.log(items);
-
   return (
-    <div>
+    <div className="page-content item-list">
       {items.map(item => {
         return <Item 
           name={item.name}

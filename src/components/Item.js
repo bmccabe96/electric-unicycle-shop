@@ -1,5 +1,6 @@
 import React, { useState }from "react";
 import styled from "styled-components";
+import { currencyFormatter } from "../utils";
 
 export const Item = (props) => {
   
@@ -15,12 +16,6 @@ export const Item = (props) => {
     borderRadius: '4px',
     cursor: 'pointer'
   })
-
-  const formatter = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-  });
-
 
   const handleHover = () => {
     setImageView(imgs[1]);
@@ -51,7 +46,7 @@ export const Item = (props) => {
       <div>
         <span>{type}</span>
         <span> | </span>
-        <span>{formatter.format(price)}</span>
+        <span>{currencyFormatter.format(price)}</span>
       </div>
       <button 
         style={btnStyle} 
@@ -74,6 +69,7 @@ const ImageContainer = styled.div`
   width: 100%;
   height: 65%;
   border-bottom: 1px solid rgb(0,0,0,0.25);
+  padding: 5px;
 `
 
 const StyledContainer = styled.div`

@@ -1,11 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import items from "./assets/products.json";
 import ItemList from "./components/ItemList";
+import Nav from "./components/Nav";
+import { countTotalCartItems } from "./utils";
 import "./styles/App.css";
 
 
 const App = () => {
   const [cart, setCart] = useState([]);
+  const [cartCount, setCartCount] = useState(0);
+
+  useEffect(() => {
+    setCartCount(countTotalCartItems(cart));
+  }, [cartCount, cart])
 
   const handleAddToCart = (id, name, price, img) => {
     for (let i=0; i<cart.length; i++) {
@@ -35,7 +42,7 @@ const App = () => {
 
   return (
     <div>
-      <p>heheh</p>
+      <Nav cartCount={cartCount}/>
       <ItemList 
         items={items} 
         handleAddToCart={handleAddToCart}
