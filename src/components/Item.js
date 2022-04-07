@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const Item = (props) => {
   
   const { id, name, type, price, imgs } = props;
+  const handleAddToCart = props.handleAddToCart;
   const [imageView, setImageView] = useState(imgs[0]);
   const [btnStyle, setBtnStyle] = useState({
     width: '100%',
@@ -52,7 +53,13 @@ export const Item = (props) => {
         <span> | </span>
         <span>{formatter.format(price)}</span>
       </div>
-      <button style={btnStyle} onMouseOver={handleBtnHover} onMouseLeave={handleBtnHoverEnd}>Add to cart</button>
+      <button 
+        style={btnStyle} 
+        onMouseOver={handleBtnHover} 
+        onMouseLeave={handleBtnHoverEnd}
+        onClick={() => handleAddToCart(id, name, price, imgs[0])}
+        >Add to cart
+      </button>
     </StyledContainer>
   )
 };

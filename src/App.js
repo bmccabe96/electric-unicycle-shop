@@ -1,14 +1,45 @@
-import React from "react";
-import products from "./assets/products.json";
-import { Item } from "./components/Item"; 
+import React, { useState } from "react";
+import items from "./assets/products.json";
+import ItemList from "./components/ItemList";
 import "./styles/App.css";
 
+
 const App = () => {
-  console.log(products[0]);
+  const [cart, setCart] = useState([]);
+
+  const handleAddToCart = (id, name, price, img) => {
+    for (let i=0; i<cart.length; i++) {
+      if (cart[i].id === id) {
+        const newCart = [...cart];
+        newCart[i] = {
+          id: id,
+          name: name,
+          cost: newCart[i].cost + price,
+          img: img,
+          count: newCart[i].count + 1
+        }
+        setCart(newCart);
+        return;
+      }
+    }
+    const newCart = cart.slice();
+    newCart.push({
+      id: id,
+          name: name,
+          cost: price,
+          img: img,
+          count: 1
+    });
+    setCart(newCart);
+  }
+
   return (
     <div>
       <p>heheh</p>
-      <Item id={products[0].id} name={products[0].name} type={products[0].type} price={products[0].price} imgs={products[0].imgs}/>
+      <ItemList 
+        items={items} 
+        handleAddToCart={handleAddToCart}
+      />
     </div>
   )
 }
