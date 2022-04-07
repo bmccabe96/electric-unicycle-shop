@@ -1,0 +1,101 @@
+[
+  {
+    "id": 0,
+    "name": "MTen3 10",
+    "type": "Beginner",
+    "price": 799,
+    "imgs": ["https://www.ewheels.com/wp-content/uploads/2017/09/MTen3-BK-RR-500x500.jpg", "https://www.ewheels.com/wp-content/uploads/2017/09/MTen3-BK-Front-Right-Oblique-2-500x500.jpg"]
+  },
+  {
+    "id": 1,
+    "name": "King Son 14D",
+    "type": "Beginner",
+    "price": 899,
+    "imgs": ["https://www.ewheels.com/wp-content/uploads/2017/09/KS14D-W-Side-500x500.jpg", "https://www.ewheels.com/wp-content/uploads/2017/09/KS14D-W-Oblique-Right-Feature-500x500.jpg"]
+  },
+  {
+    "id": 2,
+    "name": "Inmotion V8F",
+    "type": "Beginner",
+    "price": 1199,
+    "imgs": ["https://www.ewheels.com/wp-content/uploads/2019/11/V8F-Back-500x500.jpg", "https://www.ewheels.com/wp-content/uploads/2021/08/V8S-Oblique-Right-500x500.jpg"]
+  },
+  {
+    "id": 3,
+    "name": "King Son 16S",
+    "type": "Beginner",
+    "price": 1299,
+    "imgs": ["https://www.ewheels.com/wp-content/uploads/2016/03/KS16-Top-Side-500x493.jpg", "https://www.ewheels.com/wp-content/uploads/2016/03/16S-MB-Oblique-500x500.jpg"]
+  },
+  {
+    "id": 4,
+    "name": "Begode MCM5v2",
+    "type": "Beginner",
+    "price": 1350,
+    "imgs": ["https://www.ewheels.com/wp-content/uploads/2018/09/MCM5-Oblique-Right-New-1-500x500.jpg", "https://www.ewheels.com/wp-content/uploads/2018/09/MCM5-Oblique-Right-New-1-500x500.jpg"]
+  },
+  {
+    "id": 5,
+    "name": "Inmotion V10F",
+    "type": "Intermediate",
+    "price": 1500,
+    "imgs": ["https://www.ewheels.com/wp-content/uploads/2018/04/Inmotion-V10F-Rear-Slightly-Oblique-500x500.jpg", "https://www.ewheels.com/wp-content/uploads/2018/04/Inmotion-V10F-Feature-Image-500x500.jpg"]
+  },
+  {
+    "id": 6,
+    "name": "Begode Tesla V3",
+    "type": "Intermediate",
+    "price": 1750,
+    "imgs": ["https://www.ewheels.com/wp-content/uploads/2021/10/T3-Front-500x500.jpg", "https://www.ewheels.com/wp-content/uploads/2021/10/T3-Front-Oblique-Right-500x500.jpg"]
+  },
+  {
+    "id": 7,
+    "name": "King Song 16X",
+    "type": "Intermediate",
+    "price": 1999,
+    "imgs": ["https://www.ewheels.com/wp-content/uploads/2019/03/16X-Front-500x500.jpg", "https://www.ewheels.com/wp-content/uploads/2019/03/16X-Oblique-500x500.jpg"]
+  },
+  {
+    "id": 8,
+    "name": "Begode Nikola+",
+    "type": "Intermediate",
+    "price": 2175,
+    "imgs": ["https://www.ewheels.com/wp-content/uploads/2019/11/Nikola-Handle-500x500.jpg", "https://www.ewheels.com/wp-content/uploads/2019/11/Nikola-Oblique-Right-500x500.jpg"]
+  },
+  {
+    "id": 9,
+    "name": "Inmotion V11",
+    "type": "Intermediate",
+    "price": 2300,
+    "imgs": ["https://www.ewheels.com/wp-content/uploads/2020/04/V11-Front-Right-Oblique-500x500.jpg", "https://www.ewheels.com/wp-content/uploads/2020/04/V11-Front-Top-Side-500x500.jpg"]
+  },
+  {
+    "id": 10,
+    "name": "Begode EX.N",
+    "type": "Advanced",
+    "price": 3000,
+    "imgs": ["https://www.ewheels.com/wp-content/uploads/2021/09/EX.N-Side-Right-500x500.jpg", "https://www.ewheels.com/wp-content/uploads/2021/09/EX.N-Front-Oblique-Right-500x500.jpg"]
+  },
+  {
+    "id": 11,
+    "name": "Sherman Max",
+    "type": "Advanced",
+    "price": 3100,
+    "imgs": ["https://www.ewheels.com/wp-content/uploads/2020/06/Veteran-Olbique-Left-Front-500x500.jpg", "https://www.ewheels.com/wp-content/uploads/2020/06/Veteran-Side-Left-500x500.jpg"]
+  },
+  {
+    "id": 12,
+    "name": "Veteran Abrams",
+    "type": "Advanced",
+    "price": 3500,
+    "imgs": ["https://www.ewheels.com/wp-content/uploads/2021/08/Abrams-1-500x500.jpg", "https://www.ewheels.com/wp-content/uploads/2021/08/Abrams-2-500x500.jpg"]
+  },
+  {
+    "id": 13,
+    "name": "Begode Commander",
+    "type": "Advanced",
+    "price": 3999,
+    "imgs": ["https://www.ewheels.com/wp-content/uploads/2021/08/BG-Commander-Front-Right-Oblique-Feature-500x500.jpg", "https://www.ewheels.com/wp-content/uploads/2021/08/BG-Commander-Front-Right-Oblique-Feature-500x500.jpg"]
+  }
+]
+
