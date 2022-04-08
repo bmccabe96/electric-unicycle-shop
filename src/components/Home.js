@@ -66,9 +66,10 @@ const StyledHomeContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 3fr 1fr;
-  height: 70%;
+  height: 86%;
   background-image:
     radial-gradient(ellipse farthest-corner at 0 40%, white 0%, white 60%, #3c84cc 60%);  
+  box-sizing: border-box;
 `
 
 const HeadingMain = styled.div`

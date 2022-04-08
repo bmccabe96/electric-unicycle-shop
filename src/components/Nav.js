@@ -8,6 +8,7 @@ const Nav = (props) => {
   const cartCount = props.cartCount;
   const selectedTab = props.selectedTab;
   const handleTabSwitch = props.handleTabSwitch;
+  const transitionCart = props.transitionCart;
 
   return (
     <HorizontalLine>
@@ -39,12 +40,12 @@ const Nav = (props) => {
           onClick={handleTabSwitch}
           >Products
         </Link>
-        <CartContainer>
+        <CartContainer onClick={transitionCart}>
           {cartCount > 0 ?
             <div style={myCartNumberStyle}>{cartCount}</div> :
             null
           }    
-          <Icon path={mdiCart}
+          <Icon path={mdiCart} className="cart-icon"
             title="Cart"
             size={1.5}
             horizontal
@@ -63,7 +64,7 @@ const HorizontalLine = styled.div`
   grid-template-columns: 1fr 1fr;
   align-items: center;
   background-color: black;
-  height: 100px;
+  height: 14%;
   color: white;
 `
 const NavBarLeft = styled.div`
