@@ -33,9 +33,9 @@ const Home = () => {
       <div>
         <HeadingSecondary><em>The </em>place to get an EUC</HeadingSecondary>
         <br />
-        <HeadingMain>Most trusted</HeadingMain>
+        <HeadingMain>Most trusted...</HeadingMain>
         <br />
-        <HeadingMain>Best built</HeadingMain>
+        <HeadingMain>Best built...</HeadingMain>
         <br />
         <HeadingMain>Electric unicyles on the market</HeadingMain>
         <br />
@@ -57,12 +57,12 @@ const Home = () => {
 }
 
 const StyledHomeContainer = styled.div`
-  height: 100%;
-  background-image:
-    radial-gradient(ellipse farthest-corner at 0 40%, white 0%, white 60%, #3c84cc 60%);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 3fr 1fr;
+  height: 70%;
+  background-image:
+    radial-gradient(ellipse farthest-corner at 0 40%, white 0%, white 60%, #3c84cc 60%);  
 `
 
 const HeadingMain = styled.div`
@@ -81,9 +81,10 @@ const ImageContainer = styled.div`
   grid-column: 2 / 3;
   grid-row: 1 / 2;
   align-self: center;
+  justify-self: start;
   border-radius: 50%;
-  height: 40%;
-  width: 70%;
+  height: 50%;
+  width: 60%;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
 `
 
@@ -93,15 +94,5 @@ const myImgStyle = {
   borderRadius: '50%'
 }
 
-// const myBtnStyle = {
-//   width: '70%',
-//   backgroundColor: 'black',
-//   color: 'white',
-//   border: 'none',
-//   padding: '6px',
-//   borderRadius: '4px',
-//   cursor: 'pointer',
-//   fontSize: '24px'
-// }
 
 export default Home;

@@ -13,13 +13,23 @@ html, body {
 .page-content{
   padding: 75px;
   overflow-y: overlay;
-  height: 100%;
 }
 .item-list {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 50px; */
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  overflow: auto;
+  row-gap: 30px;
+
+
 }
+
+
+
+
 .nav-bar-action {
   font-size: 18px;
 }

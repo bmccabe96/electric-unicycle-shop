@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import items from "./assets/products.json";
 import ItemList from "./components/ItemList";
 import Nav from "./components/Nav";
@@ -44,11 +45,12 @@ const App = () => {
   return (
     <div className="app">
       <Nav cartCount={cartCount}/>
-      <Home />
-      {/* <ItemList 
-        items={items} 
-        handleAddToCart={handleAddToCart}
-      /> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<ItemList items={items} handleAddToCart={handleAddToCart}/>} />
+        </Routes>
+      </BrowserRouter>      
     </div>
   )
 }
