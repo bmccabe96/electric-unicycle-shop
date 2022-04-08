@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 import jumping_pic from "../assets/euc_jump.jpeg";
 
 
-const Home = () => {
+const Home = (props) => {
+
+  const handleTabSwitch = props.handleTabSwitch;
+
 
   const [btnStyle, setBtnStyle] = useState({
     width: '70%',
@@ -42,12 +46,14 @@ const Home = () => {
         <br />
         <br />
         <br />
-        <button 
-          style={btnStyle}
-          onMouseOver={handleBtnHover} 
-          onMouseLeave={handleBtnHoverEnd}
-          >Buy one today
-        </button>
+        <Link to="/products" onClick={handleTabSwitch}>
+          <button
+            style={btnStyle}
+            onMouseOver={handleBtnHover}
+            onMouseLeave={handleBtnHoverEnd}
+            >Buy one today
+          </button>
+        </Link>
       </div>
       <ImageContainer>
         <img src={jumping_pic} alt="Jumping unicycle" style={myImgStyle}/>

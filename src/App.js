@@ -11,6 +11,8 @@ import "./styles/App.css";
 const App = () => {
   const [cart, setCart] = useState([]);
   const [cartCount, setCartCount] = useState(0);
+  const [selectedTab, setSelectedTab] = useState('Home');
+
 
   useEffect(() => {
     setCartCount(countTotalCartItems(cart));
@@ -42,12 +44,21 @@ const App = () => {
     setCart(newCart);
   }
 
+  const handleTabSwitch = (e) => {
+    if(e.target.innerHTML === "Home") {
+      setSelectedTab("Home");
+    }
+    else {
+      setSelectedTab("Products");
+    }
+  }
+
   return (
     <div className="app">
-      <Nav cartCount={cartCount}/>
       <BrowserRouter>
+        <Nav cartCount={cartCount} selectedTab={selectedTab} handleTabSwitch={handleTabSwitch}/> 
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home handleTabSwitch={handleTabSwitch}/>} />
           <Route path="/products" element={<ItemList items={items} handleAddToCart={handleAddToCart}/>} />
         </Routes>
       </BrowserRouter>      

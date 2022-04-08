@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 import Icon from '@mdi/react';
-import { mdiSpeedometer, mdiCart } from '@mdi/js';
+import { mdiSpeedometer, mdiCart, mdiSetNone, mdiSourceCommitStartNextLocal } from '@mdi/js';
 
 const Nav = (props) => {
   const cartCount = props.cartCount;
+  const selectedTab = props.selectedTab;
+  const handleTabSwitch = props.handleTabSwitch;
 
   return (
     <HorizontalLine>
@@ -22,8 +25,20 @@ const Nav = (props) => {
         </div>    
       </NavBarLeft>
       <NavBarRight>
-        <div className="nav-bar-action">Home</div>
-        <div className="nav-bar-action">Products</div>
+        <Link 
+          to="/" 
+          className={selectedTab === 'Home' ? "nav-bar-action selected" : "nav-bar-action"}
+          style={myNavBarActionStyle}
+          onClick={handleTabSwitch}
+          >Home
+        </Link>
+        <Link 
+          to="/products" 
+          className={selectedTab === 'Products' ? "nav-bar-action selected" : "nav-bar-action"}
+          style={myNavBarActionStyle}
+          onClick={handleTabSwitch}
+          >Products
+        </Link>
         <CartContainer>
           {cartCount > 0 ?
             <div style={myCartNumberStyle}>{cartCount}</div> :
@@ -55,7 +70,7 @@ const NavBarLeft = styled.div`
   display: flex;
   gap: 5px;
   grid-column: 1 / 2;
-  padding-left: 25px;
+  padding-left: 75px;
   font-size: 40px;
   align-items: center;
   width: auto;
@@ -81,9 +96,14 @@ const myCartNumberStyle = {
   left: "-12px",
   backgroundColor: 'red',
   borderRadius: '50%',
-  height: '15px',
-  width: '15px',
+  height: '18px',
+  width: '18px',
   fontSize: '11px'
+}
+
+const myNavBarActionStyle = {
+  textDecoration: 'none',
+  color: 'white'
 }
 
 export default Nav;
