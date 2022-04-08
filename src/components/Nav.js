@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import Icon from '@mdi/react';
-import { mdiSpeedometer, mdiCart, mdiArmFlex } from '@mdi/js';
+import { mdiSpeedometer, mdiCart } from '@mdi/js';
 
 const Nav = (props) => {
   const cartCount = props.cartCount;
 
   return (
     <HorizontalLine>
-      <NavBarLeft>EUC Nation 
+      <NavBarLeft>
+        <div>EUC Nation</div>
         <div>
           <Icon path={mdiSpeedometer}
             title="Speed"
@@ -16,7 +17,7 @@ const Nav = (props) => {
             horizontal
             vertical
             rotate={180}
-            color="red"
+            color="#3c84cc"
           />
         </div>    
       </NavBarLeft>
@@ -56,6 +57,8 @@ const NavBarLeft = styled.div`
   grid-column: 1 / 2;
   padding-left: 25px;
   font-size: 40px;
+  align-items: center;
+  width: auto;
 `
 
 const NavBarRight = styled.div`
@@ -78,8 +81,9 @@ const myCartNumberStyle = {
   left: "-12px",
   backgroundColor: 'red',
   borderRadius: '50%',
-  height: '20px',
-  width: '20px'
+  height: '15px',
+  width: '15px',
+  fontSize: '11px'
 }
 
 export default Nav;

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import items from "./assets/products.json";
 import ItemList from "./components/ItemList";
 import Nav from "./components/Nav";
+import Home from "./components/Home";
 import { countTotalCartItems } from "./utils";
 import "./styles/App.css";
 
@@ -41,12 +42,13 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div className="app">
       <Nav cartCount={cartCount}/>
-      <ItemList 
+      <Home />
+      {/* <ItemList 
         items={items} 
         handleAddToCart={handleAddToCart}
-      />
+      /> */}
     </div>
   )
 }

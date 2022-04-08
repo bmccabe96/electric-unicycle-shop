@@ -78,8 +78,8 @@ const StyledContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   gap: 5px;
-  width: 175px;
-  height: 275px;
+  width: 195px;
+  height: 295px;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
   border-radius: 10px;
   padding: 15px;
