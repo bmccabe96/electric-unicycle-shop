@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import items from "./assets/products.json";
 import ItemList from "./components/ItemList";
 import Nav from "./components/Nav";
@@ -91,13 +91,13 @@ const App = () => {
 
   return (
     <div className="app">
-      <BrowserRouter>
+      <HashRouter>
         <Nav cartCount={cartCount} selectedTab={selectedTab} handleTabSwitch={handleTabSwitch} transitionCart={transitionCart}/> 
         <Routes>
           <Route path="/" element={<Home handleTabSwitch={handleTabSwitch}/>} />
           <Route path="/products" element={<ItemList items={items} handleAddToCart={handleAddToCart}/>} />
         </Routes>
-      </BrowserRouter>  
+      </HashRouter>  
       <Cart 
         cartVisible={cartVisible} 
         transitionCart={transitionCart} 
