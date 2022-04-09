@@ -65,6 +65,7 @@ const HorizontalLine = styled.div`
   align-items: center;
   background-color: black;
   height: 14%;
+  min-height: 56px;
   color: white;
 `
 const NavBarLeft = styled.div`
@@ -86,6 +87,7 @@ const NavBarRight = styled.div`
 
 const CartContainer = styled.div`
   position: relative;
+  cursor: pointer;
 `
 
 const myCartNumberStyle = {
@@ -93,8 +95,8 @@ const myCartNumberStyle = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  top: "-15px",
-  left: "-12px",
+  top: "20px",
+  left: "30px",
   backgroundColor: 'red',
   borderRadius: '50%',
   height: '18px',

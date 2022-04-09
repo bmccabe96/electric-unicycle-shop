@@ -21,7 +21,7 @@ const App = () => {
     setCartCount(countTotalCartItems(cart));
   }, [cartCount, cart])
 
-  const handleAddToCart = (id, name, price, img) => {
+  const handleAddToCart = (id, name, price, img, type) => {
     for (let i=0; i<cart.length; i++) {
       if (cart[i].id === id) {
         const newCart = [...cart];
@@ -30,7 +30,8 @@ const App = () => {
           name: name,
           cost: newCart[i].cost + price,
           img: img,
-          count: newCart[i].count + 1
+          count: newCart[i].count + 1,
+          type: type
         }
         setCart(newCart);
         return;
@@ -42,9 +43,37 @@ const App = () => {
           name: name,
           cost: price,
           img: img,
-          count: 1
+          count: 1,
+          type: type
     });
     setCart(newCart);
+  }
+
+  const handleRemoveFromCart = (id, name, price, img, type) => {
+    console.log("REMOVE");
+    for (let i=0; i<cart.length; i++) {
+      if (cart[i].id === id) {
+        if (cart[i].count > 1) {
+          //logic for keeping item in cart but decrementing value therein...
+          const newCart = [...cart];
+          newCart[i] = {
+            id: id,
+            name: name,
+            cost: newCart[i].cost - price,
+            img: img,
+            count: newCart[i].count - 1,
+            type: type
+          }
+          setCart(newCart);
+          return;
+        }
+        else {
+          //logic to remove from array entirely
+          const newCart = cart.filter((c) => c !== cart[i]);
+          setCart(newCart);
+        }
+      }
+    }
   }
 
   const handleTabSwitch = (e) => {
@@ -69,7 +98,13 @@ const App = () => {
           <Route path="/products" element={<ItemList items={items} handleAddToCart={handleAddToCart}/>} />
         </Routes>
       </BrowserRouter>  
-      <Cart cartVisible={cartVisible} transitionCart={transitionCart}/>    
+      <Cart 
+        cartVisible={cartVisible} 
+        transitionCart={transitionCart} 
+        cart={cart} 
+        handleAddToCart={handleAddToCart}
+        handleRemoveFromCart={handleRemoveFromCart}
+      />    
     </div>
   )
 }

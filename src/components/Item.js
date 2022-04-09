@@ -52,7 +52,7 @@ export const Item = (props) => {
         style={btnStyle} 
         onMouseOver={handleBtnHover} 
         onMouseLeave={handleBtnHoverEnd}
-        onClick={() => handleAddToCart(id, name, price, imgs[0])}
+        onClick={() => handleAddToCart(id, name, price, imgs[0], type)}
         >Add to cart
       </button>
     </StyledContainer>
