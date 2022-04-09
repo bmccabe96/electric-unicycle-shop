@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/electric-unicycle-shop/static/css/main.45882bb8.css",
+    "main.js": "/electric-unicycle-shop/static/js/main.78c860ea.js",
+    "index.html": "/electric-unicycle-shop/index.html",
+    "main.45882bb8.css.map": "/electric-unicycle-shop/static/css/main.45882bb8.css.map",
+    "main.78c860ea.js.map": "/electric-unicycle-shop/static/js/main.78c860ea.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45882bb8.css",
+    "static/js/main.78c860ea.js"
+  ]
+}
