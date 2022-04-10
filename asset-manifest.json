@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/electric-unicycle-shop/static/css/main.45882bb8.css",
-    "main.js": "/electric-unicycle-shop/static/js/main.d0fb2206.js",
+    "main.css": "/electric-unicycle-shop/static/css/main.7f0300b3.css",
+    "main.js": "/electric-unicycle-shop/static/js/main.2b8bff71.js",
     "index.html": "/electric-unicycle-shop/index.html",
-    "main.45882bb8.css.map": "/electric-unicycle-shop/static/css/main.45882bb8.css.map",
-    "main.d0fb2206.js.map": "/electric-unicycle-shop/static/js/main.d0fb2206.js.map"
+    "main.7f0300b3.css.map": "/electric-unicycle-shop/static/css/main.7f0300b3.css.map",
+    "main.2b8bff71.js.map": "/electric-unicycle-shop/static/js/main.2b8bff71.js.map"
   },
   "entrypoints": [
-    "static/css/main.45882bb8.css",
-    "static/js/main.d0fb2206.js"
+    "static/css/main.7f0300b3.css",
+    "static/js/main.2b8bff71.js"
   ]
 }
