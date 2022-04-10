@@ -38,10 +38,6 @@ const Cart = (props) => {
     setBtnStyle(newStyle);
   }
 
-  useEffect(() => {
-    console.log(cart);
-  }, [cart]);
-
 
   return (
     <div className={cartVisible ? "cart-container enter" : "cart-container"}>

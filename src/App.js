@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
-import items from "./assets/products.json";
+import products from "./assets/products.json";
 import ItemList from "./components/ItemList";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Cart from "./components/Cart";
+import Filter from "./components/Filter";
 import { countTotalCartItems } from "./utils";
 import "./styles/App.css";
 import { mdiConsoleNetwork } from "@mdi/js";
 
 
 const App = () => {
+  const [items, setItems] = useState(products);
   const [cart, setCart] = useState([]);
   const [cartCount, setCartCount] = useState(0);
   const [selectedTab, setSelectedTab] = useState('Home');
@@ -50,7 +52,6 @@ const App = () => {
   }
 
   const handleRemoveFromCart = (id, name, price, img, type) => {
-    console.log("REMOVE");
     for (let i=0; i<cart.length; i++) {
       if (cart[i].id === id) {
         if (cart[i].count > 1) {
@@ -89,13 +90,21 @@ const App = () => {
     setCartVisible(!cartVisible);
   }
 
+  const filterList = (curcat) => {
+    const newList = products.filter((item) => {
+      return item.type === curcat;
+    });
+    console.log(newList);
+    setItems(newList);
+  };
+
   return (
     <div className="app">
       <HashRouter>
         <Nav cartCount={cartCount} selectedTab={selectedTab} handleTabSwitch={handleTabSwitch} transitionCart={transitionCart}/> 
         <Routes>
           <Route path="/" element={<Home handleTabSwitch={handleTabSwitch}/>} />
-          <Route path="/products" element={<ItemList items={items} handleAddToCart={handleAddToCart}/>} />
+          <Route path="/products" element={<ItemList items={items} handleAddToCart={handleAddToCart} filterList={filterList} setItems={setItems} products={products}/>} />
         </Routes>
       </HashRouter>  
       <Cart 

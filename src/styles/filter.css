@@ -1,0 +1,22 @@
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 75px;
+  margin-top: 20px;
+}
+
+.filter-button {
+  width: auto;
+  background-color:#3c84cc;
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.filter-button:hover {
+  opacity: .8;
+}
